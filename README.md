@@ -2,7 +2,7 @@
 
 Outlander is a dark, flat UI theme for [Atom](https://atom.io/).
 
-![screenshot.png](screenshot.png)
+![screenshot.png](https://raw.githubusercontent.com/mthadley/outlander-ui/master/screenshot.png)
 
 Best used with [Outlander-Syntax](https://github.com/mthadley/outlander-syntax).
 
