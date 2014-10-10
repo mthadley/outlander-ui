@@ -1,14 +1,29 @@
-// Colors
+// Outlander Colors
+@very-light-gray: #bebebe;
+@light-gray: #6e6e6e;
+@gray: #4e4e4e;
+@dark-gray: #2e2e2e;
+@very-dark-gray: #222;
 
-@text-color: #aaa;
-@text-color-subtle: #555;
+@cyan: #66cccc;
+@blue: #6699cc;
+@purple: #cc99cc;
+@green: #99cc99;
+@red: #f2777a;
+@accent: #ffcc66;
+@light-accent: #f99157;
+
+// UI Colors
+
+@text-color: #bebebe;
+@text-color-subtle: #6e6e6e;
 @text-color-highlight: #fff;
 @text-color-selected: @text-color-highlight;
 
-@text-color-info: #5293d8;
-@text-color-success: #26c26a;
-@text-color-warning: #ff982d;
-@text-color-error: #c00;
+@text-color-info: @blue;
+@text-color-success: @green;
+@text-color-warning: @cyan;
+@text-color-error: @red;
 
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
@@ -16,14 +31,14 @@
 @text-color-modified: @text-color-warning;
 @text-color-removed: @text-color-error;
 
-@background-color-info: #0098ff;
-@background-color-success: #17ca65;
-@background-color-warning: #ffaa2c;
-@background-color-error: #c00;
+@background-color-info: darken(@text-color-info, 10%);
+@background-color-success: darken(@text-color-success, 20%);
+@background-color-warning: darken(@light-accent, 20%);
+@background-color-error: darken(@text-color-error, 35%);
 @background-color-highlight: rgba(255, 255, 255, 0.07);
-@background-color-selected: #4182C4;
+@background-color-selected: darken(@cyan, 25%);
 
-@app-background-color: #333;
+@app-background-color: @dark-gray;
 
 @base-background-color: lighten(@tool-panel-background-color, 5%);
 @base-border-color: rgba(0, 0, 0, 0.5);
@@ -31,49 +46,51 @@
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: rgba(0, 0, 0, 0.5);
 
-@input-background-color: #212224;
-@input-border-color: @base-border-color;
+@input-background-color: @very-dark-gray;
 
-@tool-panel-background-color: #1d1f21;
+@tool-panel-background-color: @dark-gray;
 @tool-panel-border-color: @base-border-color;
 
-@inset-panel-background-color: #161719;
+@inset-panel-background-color: @very-dark-gray;
 @inset-panel-border-color: @base-border-color;
 
-@panel-heading-background-color: #43484d;
+@pane-background-color: @very-dark-gray;
+
+@panel-heading-background-color: @gray;
 @panel-heading-border-color: fadein(@base-border-color, 10%);
 
-@overlay-background-color: #202123;
-@overlay-border-color: @background-color-highlight;
+@overlay-background-color: @dark-gray;
 
-@button-background-color: #43484d;
+@button-background-color: #232323;
 @button-background-color-hover: lighten(@button-background-color, 5%);
-@button-background-color-selected: #5c6064;
+@button-background-color-selected: #141414;
 @button-border-color: @base-border-color;
 
-@tab-bar-background-color: #222;
-@tab-bar-border-color: darken(@tab-background-color-active, 10%);
-@tab-background-color: #333;
-@tab-background-color-active: #222;
-@tab-border-color: #484848;
+@tab-bar-background-color: #2d2d2d;
+@tab-bar-border-color: darken(@tab-background-color-active, 20%);
+@tab-background-color: @dark-gray;
+@tab-background-color-hover: darken(@gray, 5%);
+@tab-background-color-active: @very-dark-gray;
+@tab-border-color: @very-dark-gray;
 
 @tree-view-background-color: @tool-panel-background-color;
 @tree-view-border-color: @tool-panel-border-color;
 
-@scrollbar-background-color: rgba(42, 42, 42, 0.5);
-@scrollbar-color: rgba(92, 92, 92, 0.5);
+@scrollbar-background-color: transparent;
+@scrollbar-color: @gray;
 
 @ui-site-color-1: @background-color-success; // green
 @ui-site-color-2: @background-color-info; // blue
 @ui-site-color-3: @background-color-warning; // orange
-@ui-site-color-4: #db2ff4; // purple
-@ui-site-color-5: #f5e11d; // yellow
+@ui-site-color-4: @purple; // purple
+@ui-site-color-5: @accent; // yellow
 
 
 // Sizes
 
 @font-size: 11px;
 @input-font-size: 14px;
+@input-line-height: 27px;
 
 @disclosure-arrow-size: 12px;
 
@@ -81,9 +98,9 @@
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
 @component-line-height: 25px;
-@component-border-radius: 2px;
+@component-border-radius: 0px;
 
-@tab-height: 26px;
+@tab-height: 24px;
 
 
 // Other
