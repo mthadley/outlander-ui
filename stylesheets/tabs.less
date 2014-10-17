@@ -91,6 +91,10 @@
 
 		&.modified:hover .close-icon {
 			color: @tab-background-color;
+
+			&:hover {
+				color: @text-color-modified;
+			}
 		}
 
 		&.modified .title {
@@ -128,8 +132,13 @@
 			-webkit-transform: skewX(-@tab-skew);
 		}
 
-		&.modified .close-icon {
+		&.modified:hover .close-icon, {
 			border-color: @text-color-modified;
+			color: @text-color-modified;
+
+			&:hover {
+				color: lighten(@text-color-modified, 15%);
+			}
 		}
 	}
 
