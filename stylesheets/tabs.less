@@ -9,146 +9,146 @@
 @tab-max-width: 160px;
 
 .tab-bar {
-  height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-  background: @tab-bar-background-color;
+	height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+	background: @tab-bar-background-color;
 
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: @tab-bottom-border-height;
-    left: 0px;
-    width: 100%;
-    background-color: @tab-background-color-active;
-  }
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		height: @tab-bottom-border-height;
+		left: 0px;
+		width: 100%;
+		background-color: @tab-background-color-active;
+	}
 
-  .tab {
-    position: relative;
-    top: @tab-top-padding;
-    max-width: @tab-max-width;
-    height: @tab-height;
-    line-height: @tab-height;
-    padding: 0;
-    margin: 0 20px 0 5px;
-    color: @text-color;
+	.tab {
+		position: relative;
+		top: @tab-top-padding;
+		max-width: @tab-max-width;
+		height: @tab-height;
+		line-height: @tab-height;
+		padding: 0;
+		margin: 0 20px 0 5px;
+		color: @text-color;
 
-    transition: color .1s ease-in;
+		transition: color .1s ease-in;
 
-    &, &:before, &:after {
-      background: @tab-background-color;
-      height: @tab-height;
-    }
+		&, &:before, &:after {
+			background: @tab-background-color;
+			height: @tab-height;
+		}
 
-    &:hover {
-     &, &:before, &:after {
-        background-color: @tab-background-color-hover;
-        transition: background-color .1s ease-in;
-        z-index: 1;
-      }
-    }
+		&:hover {
+		 &, &:before, &:after {
+				background-color: @tab-background-color-hover;
+				transition: background-color .1s ease-in;
+				z-index: 1;
+			}
+		}
 
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      top: 0px;
-      width: 25px;
-      height: @tab-height;
-    }
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			top: 0px;
+			width: 25px;
+			height: @tab-height;
+		}
 
-    // left angled edge
-    &:before {
-      left: -14px;
-      border-top-left-radius: @tab-radius;
-      -webkit-transform: skewX(-@tab-skew);
-    }
+		// left angled edge
+		&:before {
+			left: -14px;
+			border-top-left-radius: @tab-radius;
+			-webkit-transform: skewX(-@tab-skew);
+		}
 
-    // right angled edge
-    &:after {
-      right: -14px;
-      border-top-right-radius: @tab-radius;
-      -webkit-transform: skewX(@tab-skew);
-    }
+		// right angled edge
+		&:after {
+			right: -14px;
+			border-top-right-radius: @tab-radius;
+			-webkit-transform: skewX(@tab-skew);
+		}
 
-    .close-icon {
-      right: 0;
-      z-index: 3;
-      text-align: right;
-      line-height: @tab-height;
-      color: @tab-background-color;
+		.close-icon {
+			right: 0;
+			z-index: 3;
+			text-align: right;
+			line-height: @tab-height;
+			color: @tab-background-color;
 
-      &:hover {
-        color: inherit;
-      }
-    }
+			&:hover {
+				color: inherit;
+			}
+		}
 
-    &.modified:not(:hover) .close-icon {
-      border-color: @tab-background-color;
-      right: 0;
-      top: @tab-height/2 - @modified-icon-width/2 + 1px;
-      width: @modified-icon-width;
-      height: @modified-icon-width;
-    }
+		&.modified:not(:hover) .close-icon {
+			border-color: @tab-background-color;
+			right: 0;
+			top: @tab-height/2 - @modified-icon-width/2 + 1px;
+			width: @modified-icon-width;
+			height: @modified-icon-width;
+		}
 
-    &.modified:hover .close-icon {
-      color: @tab-background-color;
-    }
+		&.modified:hover .close-icon {
+			color: @tab-background-color;
+		}
 
-    &.modified .title {
-      color: lighten(@text-color-modified, 10%);
-    }
+		&.modified .title {
+			color: lighten(@text-color-modified, 10%);
+		}
 
-    .title{
-      position: relative;
-      z-index: 1;
-      padding-right: 10px
-    }
+		.title{
+			position: relative;
+			z-index: 1;
+			padding-right: 10px
+		}
 
-    &:first-child {
-      margin-left: 20px;
-    }
-  }
+		&:first-child {
+			margin-left: 20px;
+		}
+	}
 
-  .tab.active {
-    z-index: 1;
-    color: @text-color-highlight;
+	.tab.active {
+		z-index: 1;
+		color: @text-color-highlight;
 
-    .close-icon {
-      line-height: @tab-height - 1px;
-      color: @text-color;
-    }
+		.close-icon {
+			line-height: @tab-height - 1px;
+			color: @text-color;
+		}
 
-    &, &:before, &:after {
-      background: @tab-background-color-active;
-      height: @tab-height + 1px;
-    }
+		&, &:before, &:after {
+			background: @tab-background-color-active;
+			height: @tab-height + 1px;
+		}
 
-    &:before {
-      left: -14px;
-      border-top-left-radius: @tab-radius;
-      -webkit-transform: skewX(-@tab-skew);
-    }
+		&:before {
+			left: -14px;
+			border-top-left-radius: @tab-radius;
+			-webkit-transform: skewX(-@tab-skew);
+		}
 
-    &.modified .close-icon {
-      border-color: @text-color-modified;
-    }
-  }
+		&.modified .close-icon {
+			border-color: @text-color-modified;
+		}
+	}
 
-  .tab:hover {
-    color: @text-color-highlight;
-  }
+	.tab:hover {
+		color: @text-color-highlight;
+	}
 
-  .tab.active:hover .close-icon {
-    color: @text-color;
+	.tab.active:hover .close-icon {
+		color: @text-color;
 
-    &:hover {
-      color: inherit;
-    }
-  }
+		&:hover {
+			color: inherit;
+		}
+	}
 
-  .placeholder {
-    height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-    &:after {
-      top: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-    }
-  }
+	.placeholder {
+		height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+		&:after {
+			top: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+		}
+	}
 }

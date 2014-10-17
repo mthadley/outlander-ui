@@ -5,28 +5,28 @@
 }
 
 .workspace {
-  background-color: @app-background-color;
+	background-color: @app-background-color;
 }
 
 .scrollbars-visible-always {
-  ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
+	::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
 
-  ::-webkit-scrollbar-track,
-  ::-webkit-scrollbar-corner {
-    background: @scrollbar-background-color;
-  }
+	::-webkit-scrollbar-track,
+	::-webkit-scrollbar-corner {
+		background: @scrollbar-background-color;
+	}
 
-  .vertical {
-    & ::-webkit-scrollbar-track,
-    & ::-webkit-scrollbar-corner {
-      background: @editor-scrollbar-background-color;
-    }
-  }
+	.vertical {
+		& ::-webkit-scrollbar-track,
+		& ::-webkit-scrollbar-corner {
+			background: @editor-scrollbar-background-color;
+		}
+	}
 
-  ::-webkit-scrollbar-thumb {
-    background: @scrollbar-color;
-  }
+	::-webkit-scrollbar-thumb {
+		background: @scrollbar-color;
+	}
 }

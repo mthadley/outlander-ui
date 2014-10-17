@@ -2,23 +2,23 @@
 @import "ui-mixins";
 
 .editor {
-    border-left: 1px solid @pane-background-color;
+		border-left: 1px solid @pane-background-color;
 
-  .mini {
-    color: @text-color-highlight;
-    background-color: @input-background-color;
-    border-left: 0;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    border-radius: @component-border-radius;
-    line-height: @input-line-height;
-    padding-left: @component-padding/2;
-  }
+	.mini {
+		color: @text-color-highlight;
+		background-color: @input-background-color;
+		border-left: 0;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+		border-radius: @component-border-radius;
+		line-height: @input-line-height;
+		padding-left: @component-padding/2;
+	}
 
-  .cursor { border-color: #fff; }
-  .selection .region { background-color: lighten(@input-background-color, 10%); }
+	.cursor { border-color: #fff; }
+	.selection .region { background-color: lighten(@input-background-color, 10%); }
 }
 
 .editor.editor-colors.mini.is-focused {
-  background-color: lighten(@input-background-color, 2%);
-  .selection .region { background-color: @background-color-highlight; }
+	background-color: lighten(@input-background-color, 2%);
+	.selection .region { background-color: @background-color-highlight; }
 }
