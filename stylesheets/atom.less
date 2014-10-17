@@ -19,6 +19,13 @@
     background: @scrollbar-background-color;
   }
 
+  .vertical {
+    & ::-webkit-scrollbar-track,
+    & ::-webkit-scrollbar-corner {
+      background: @editor-scrollbar-background-color;
+    }
+  }
+
   ::-webkit-scrollbar-thumb {
     background: @scrollbar-color;
   }
