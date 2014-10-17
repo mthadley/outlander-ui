@@ -40,7 +40,7 @@
 		}
 
 		&:hover {
-		 &, &:before, &:after {
+			&, &:before, &:after {
 				background-color: @tab-background-color-hover;
 				transition: background-color .1s ease-in;
 				z-index: 1;
@@ -132,7 +132,12 @@
 			-webkit-transform: skewX(-@tab-skew);
 		}
 
-		&.modified:hover .close-icon, {
+		&.modified .close-icon {
+			border-color: @text-color-modified;
+			color: @text-color-modified;
+		}
+
+		&.modified:hover .close-icon {
 			border-color: @text-color-modified;
 			color: @text-color-modified;
 
