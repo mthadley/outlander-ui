@@ -8,8 +8,8 @@ Best used with [Outlander-Syntax](https://github.com/mthadley/outlander-syntax).
 
 ## Installation
 Run the following in a terminal:
-```
-apm install outlander-ui outlander-syntax
+```sh
+$ apm install outlander-ui outlander-syntax
 ```
 Alternatively, the theme can be installed from the settings menu at **_preferences -> themes_**, from where the theme itself can also be applied.
 
