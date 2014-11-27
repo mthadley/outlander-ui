@@ -1,25 +1,21 @@
 @import "ui-variables";
 @import "ui-mixins";
 
-.editor {
-	.mini {
-		color: @text-color-highlight;
-		background-color: @input-background-color;
-		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-		border-radius: @component-border-radius;
-		line-height: @input-line-height;
-		padding-left: @component-padding/2;
-	}
+atom-text-editor::shadow,
+.editor /* deprecated */ {
+	border-left: 1px solid @pane-background-color;
 
 	.cursor { border-color: #fff; }
 	.selection .region { background-color: lighten(@input-background-color, 5%); }
 }
 
-.editor.editor-colors.mini.is-focused {
-	background-color: lighten(@input-background-color, 2%);
-	.selection .region { background-color: @background-color-highlight; }
-}
-
-.editor:not(.mini) {
-	border-left: 1px solid @pane-background-color;
+atom-text-editor[mini]::shadow,
+.editor.mini /* deprecated */ {
+	color: @text-color-highlight;
+	background-color: @input-background-color;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	border-radius: @component-border-radius;
+	border-left-width: 0;
+	line-height: @input-line-height;
+	padding-left: @component-padding/2;
 }
