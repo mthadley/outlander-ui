@@ -20,3 +20,7 @@ Alternatively, the theme can be installed from the settings menu at **_preferenc
 
 * Its no coincidence that Outlander plays nice with [Numix](https://numixproject.org/)
 * [Light Table](http://www.lighttable.com/)
+
+### Contributing
+
+Feel free to open issues, make suggestions, and create pull requests. If it's a bug or a style tweak thats fits with outlander's aesthetic, it will probably make it in.
