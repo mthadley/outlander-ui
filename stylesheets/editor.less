@@ -1,16 +1,14 @@
 @import "ui-variables";
 @import "ui-mixins";
 
-atom-text-editor::shadow,
-.editor /* deprecated */ {
+atom-text-editor::shadow {
 	border-left: 1px solid @pane-background-color;
 
 	.cursor { border-color: #fff; }
 	.selection .region { background-color: lighten(@input-background-color, 5%); }
 }
 
-atom-text-editor[mini]::shadow,
-.editor.mini /* deprecated */ {
+atom-text-editor[mini]::shadow {
 	color: @text-color-highlight;
 	background-color: @input-background-color;
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
