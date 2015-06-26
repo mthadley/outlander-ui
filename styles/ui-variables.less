@@ -1,3 +1,5 @@
+@import "syntax-variables";
+
 // Outlander Colors
 @gray: #4e4e4e;
 @dark-gray: #2d2d2d;
@@ -71,8 +73,8 @@
 @tab-bar-border-color: darken(@tab-background-color-active, 20%);
 @tab-background-color: @dark-gray;
 @tab-background-color-hover: darken(@gray, 5%);
-@tab-background-color-active: @very-dark-gray;
-@tab-border-color: @very-dark-gray;
+@tab-background-color-active: @syntax-background-color;
+@tab-border-color: @syntax-background-color;
 
 @tree-view-background-color: @tool-panel-background-color;
 @tree-view-border-color: @tool-panel-border-color;
