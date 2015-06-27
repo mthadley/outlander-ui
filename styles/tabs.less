@@ -135,11 +135,16 @@
 			}
 		}
 
-		&[data-type$="SettingsView"] {
-			&, &:before, &:after {
-				background: @base-background-color;
+		#tab-type(@type; @color) {
+			&[data-type$="@{type}"] {
+				&, &:before, &:after {
+					background: @color;
+				}
 			}
 		}
+
+		#tab-type("SettingsView", @base-background-color);
+		#tab-type("ResultsPaneView", @panel-heading-background-color);
 	}
 
 	.tab:hover {
