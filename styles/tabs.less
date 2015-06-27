@@ -3,24 +3,13 @@
 @modified-icon-width: 8px;
 @tab-skew: 30deg;
 @tab-top-padding: 5px;
-@tab-bottom-border-height: 5px;
 @tab-border: 1px solid @tab-border-color;
 @tab-bar-bottom-border-color: #111;
 @tab-max-width: 160px;
 
 .tab-bar {
-	height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+	height: @tab-height + @tab-top-padding;
 	background: @tab-bar-background-color;
-
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		height: @tab-bottom-border-height;
-		left: 0px;
-		width: 100%;
-		background-color: @tab-background-color-active;
-	}
 
 	.tab {
 		position: relative;
@@ -145,6 +134,12 @@
 				color: lighten(@text-color-modified, 15%);
 			}
 		}
+
+		&[data-type$="SettingsView"] {
+			&, &:before, &:after {
+				background: @base-background-color;
+			}
+		}
 	}
 
 	.tab:hover {
@@ -160,9 +155,9 @@
 	}
 
 	.placeholder {
-		height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+		height: @tab-height + @tab-top-padding;
 		&:after {
-			top: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+			top: @tab-height + @tab-top-padding;
 		}
 	}
 }
