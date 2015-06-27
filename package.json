@@ -4,6 +4,7 @@
   "version": "1.1.0",
   "description": "A dark flat theme from elsewhere",
   "license": "MIT",
+  "main": "lib/outlander",
   "repository": "https://github.com/mthadley/outlander-ui",
   "engines": {
     "atom": ">0.40.0"
