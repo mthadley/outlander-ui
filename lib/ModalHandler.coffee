@@ -5,8 +5,6 @@ class ModalHandler
 
 	disposables: []
 
-	modals: []
-
 	constructor: ->
 		workspace = document.querySelector('atom-workspace')
 
@@ -15,13 +13,15 @@ class ModalHandler
 
 			@toggleOverlayStatus()
 
-			atom.workspace.panelContainers.modal.onDidAddPanel (panel) =>
+			modalContainer = atom.workspace.panelContainers.modal
+			@modals = modalContainer.panels
+
+			modalContainer.onDidAddPanel (panel) =>
 				modal = panel.panel
 
 				@visibleModal = true
 				@toggleOverlayStatus()
 
-				@modals.push modal
 				@disposables.push modal.onDidChangeVisible => @checkModals()
 
 	checkModals: ->
