@@ -32,5 +32,10 @@ atom-workspace {
 
 	/deep/ ::-webkit-scrollbar-thumb {
 		background: @scrollbar-color;
+		border: 3px solid @scrollbar-background-color;
+
+		&:active {
+			border-width: 0;
+		}
 	}
 }
