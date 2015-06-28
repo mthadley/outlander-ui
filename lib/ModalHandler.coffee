@@ -10,7 +10,6 @@ class ModalHandler
 
 		if workspace
 			@workspace = workspace
-
 			@toggleOverlayStatus()
 
 			modalContainer = atom.workspace.panelContainers.modal
@@ -33,7 +32,6 @@ class ModalHandler
 				break
 
 		@visibleModal = visibleModal
-
 		@toggleOverlayStatus()
 
 	toggleOverlayStatus: ->

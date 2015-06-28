@@ -21,15 +21,14 @@ atom-panel.modal {
 			.status.icon {
 				float: right;
 				margin-left: @component-icon-padding;
+
 				&:before {
 					margin-right: 0;
 				}
 			}
 
-			&.selected {
-				.status.icon {
-					color: @text-color-selected;
-				}
+			&.selected .status.icon {
+				color: @text-color-selected;
 			}
 		}
 	}
