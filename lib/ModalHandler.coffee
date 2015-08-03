@@ -1,11 +1,13 @@
+{CompositeDisposable} = require 'atom'
+
 DATA_STATUS = 'outlander-visible-modal';
 
 class ModalHandler
 	visibleModal: false
 
-	disposables: []
-
 	constructor: ->
+		@subscriptions = new CompositeDisposable
+
 		workspace = document.querySelector('atom-workspace')
 
 		if workspace
@@ -21,7 +23,7 @@ class ModalHandler
 				@visibleModal = true
 				@toggleOverlayStatus()
 
-				@disposables.push modal.onDidChangeVisible => @checkModals()
+				@subscriptions.add modal.onDidChangeVisible => @checkModals()
 
 	checkModals: ->
 		visibleModal = false
@@ -41,6 +43,6 @@ class ModalHandler
 			@workspace.setAttribute DATA_STATUS, @visibleModal
 
 	destroy: ->
-		disposable.dispose() for disposoable in @disposables
+		@subscriptions.dispose()
 
 module.exports = ModalHandler
