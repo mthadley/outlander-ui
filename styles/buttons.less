@@ -5,7 +5,9 @@
 	color: @text-color;
 	background-color: @color;
 
-	&:focus {
+	&:focus,
+	&:active:focus {
+		background-color: @color;
 		color: @text-color;
 	}
 	&:hover {
