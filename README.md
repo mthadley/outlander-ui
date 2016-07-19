@@ -1,5 +1,7 @@
 # Outlander
 
+[![Build Status](https://travis-ci.org/mthadley/outlander-ui.svg?branch=master)](https://travis-ci.org/mthadley/outlander-ui)
+
 Outlander is a dark, flat UI theme for [Atom](https://atom.io/).
 
 ![screenshot.png](https://raw.githubusercontent.com/mthadley/outlander-ui/master/screenshot.png)
