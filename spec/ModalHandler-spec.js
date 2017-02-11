@@ -42,4 +42,18 @@ describe('ModalHandler', () => {
 
     expect(workspaceElement.classList.contains(CLASSNAME)).toBe(false)
   })
+
+  it('should not add class when the new panel is not visible', () => {
+    atom.config.set('outlander-ui.showBlur', true)
+
+    const workspaceElement = atom.views.getView(atom.workspace)
+    expect(workspaceElement.classList.contains(CLASSNAME)).toBe(false)
+
+    const testModal = atom.workspace.addModalPanel({
+      item: document.createElement('div'),
+      visible: false
+    })
+
+    expect(workspaceElement.classList.contains(CLASSNAME)).toBe(false)
+  })
 })
